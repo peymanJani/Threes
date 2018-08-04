@@ -18,7 +18,7 @@ import android.widget.Toast;
  * Created by PC_peyman on 2/11/2017.
  */
 
-public class GameView extends ImageView {
+public class GameView extends android.support.v7.widget.AppCompatImageView {
 
     boolean check_below;
     private int conter;
@@ -102,7 +102,7 @@ public class GameView extends ImageView {
 
             }
         }
-        invalidate();
+       // invalidate();
     }
     private void go_top() {
         byte value=0;
