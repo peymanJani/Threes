@@ -51,6 +51,18 @@ public class MainActivity extends AppCompatActivity {
         UpdateRanInt();
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        G.performance.edit().putInt("Best", G.best).commit();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        G.performance.edit().putInt("Best", G.best).commit();
+    }
+
     public void UpdateScore(){
         txt.setText(""+G.score);
         bestValue.setText(""+G.best);
